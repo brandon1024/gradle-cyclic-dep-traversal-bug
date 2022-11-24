@@ -1,0 +1,17 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    implementation project(':project-1')
+}
+
+task die {
+    doLast {
+        project.configurations.runtimeClasspath.resolvedConfiguration.firstLevelModuleDependencies.each {
+            it.allModuleArtifacts.each {
+                println it
+            }
+        }
+    }
+}
