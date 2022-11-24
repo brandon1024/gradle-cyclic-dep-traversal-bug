@@ -6,6 +6,8 @@ This causes Gradle to recurse until overflowing the stack space.
 
 This defect is quite easy to reproduce. Steps shown below.
 
+The upstream issue can be found [here](https://github.com/gradle/gradle/issues/22850).
+
 ## Steps to Reproduce
 
 ```
@@ -28,3 +30,4 @@ Execution failed for task ':project-1-2-1:die'.
 BUILD FAILED in 428ms
 1 actionable task: 1 executed
 ```
+
